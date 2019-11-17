@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Revert numbers</title>
+        <script>
+            function revert(arr){
+                var left = 0;
+                var rigth = arr.length-1;
+                while(left < rigth){
+                    var temp = arr[left];
+                    arr[left] = arr[rigth];
+                    arr[rigth] = temp;
+                    left++;
+                    rigth--
+                }
+                alert(arr);
+            }
+            function myFunction() {
+                values = document.getElementById("inputValues").value
+                var array = values.split(',');
+                revert(array);
+            }
+        </script>
+    </head>
+
+<body>
+    <h1>Revert numbers</h1>
+    <p>Enter any text or numbers seperated with comma and you will get the revert</p>
+    <input type="text" id = "inputValues">
+    <input type = "button" onclick = "myFunction();" name = "ok" value = "Revert" />
+    </body>
+</html>
